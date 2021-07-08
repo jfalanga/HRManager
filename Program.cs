@@ -15,8 +15,15 @@ namespace HRManager
             hrEmp.LastName = "Lewis";
             Console.WriteLine("hrEmp's- or {0} {1}'s- pay summery would be: {2}",hrEmp.FirstName,hrEmp.LastName,hrEmp.GetPaySummary());
             Employee emp2 = hrEmp;
-            Console.WriteLine("But emp2's pay summery is: "+emp2.GetPaySummary());
-            Console.WriteLine("...AND, ");
+            Console.WriteLine("But emp2's (which should be the same as hrEmp) pay summery is: "+emp2.GetPaySummary());
+            emp.something = 200;
+            Console.WriteLine("Something about emp is: "+emp.something);
+            Console.WriteLine("Trying to make hrEmp's something the same...");
+            hrEmp.something = 200;
+            Console.WriteLine("...but it's "+hrEmp.something);
+            Console.WriteLine("Maybe emp2 can be 10...");
+            emp2.something = 10;
+            Console.WriteLine(emp2.something+"No! It's "+emp2.something);
         }
     }
 }
