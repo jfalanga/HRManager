@@ -11,9 +11,17 @@ namespace HRManager
             emp.FirstName = "Thomas";
             emp.LastName = "Aquinas";
             Console.WriteLine("emp's ({0},{1}) pay summery is: {2}", emp.LastName,emp.FirstName,emp.GetPaySummary());
+            
+            Console.WriteLine("Now, emp's ToString: {0}. It's GetType is: {1}; while it's GetHashCode is {2}",
+                emp.ToString(),emp.GetType(),emp.GetHashCode());
+            Console.WriteLine();
+            Console.WriteLine();
+
             hrEmp.FirstName = "CS";
             hrEmp.LastName = "Lewis";
             Console.WriteLine("hrEmp's- or {0} {1}'s- pay summery would be: {2}",hrEmp.FirstName,hrEmp.LastName,hrEmp.GetPaySummary());
+            Console.WriteLine("hrEmp's ToString is: {0}", hrEmp.ToString());
+
             Employee emp2 = hrEmp;
             Console.WriteLine("But emp2's (which should be the same as hrEmp) pay summery is: "+emp2.GetPaySummary());
             emp.something = 200;
