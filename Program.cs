@@ -21,11 +21,15 @@ namespace HRManager
             hrEmp.LastName = "Lewis";
             Console.WriteLine("hrEmp's- or {0} {1}'s- pay summery would be: {2}",hrEmp.FirstName,hrEmp.LastName,hrEmp.GetPaySummary());
             Console.WriteLine("hrEmp's ToString is: {0}", hrEmp.ToString());
+            Console.WriteLine("And it's GetType returns:"+ hrEmp.GetType());
+            Console.WriteLine("...AND, it's hashcode is: "+hrEmp.GetHashCode());
+            Console.WriteLine();
+            Console.WriteLine();
 
             Employee emp2 = hrEmp;
             Console.WriteLine("But emp2's (which should be the same as hrEmp) pay summery is: "+emp2.GetPaySummary());
             emp.something = 200;
-            Console.WriteLine("Something about emp is: "+emp.something);
+            Console.WriteLine("Something about emp is: " + emp.something +"; if we try setting it to 200.") ;
             Console.WriteLine("Trying to make hrEmp's something the same...");
             hrEmp.something = 200;
             Console.WriteLine("...but it's "+hrEmp.something);
