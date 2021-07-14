@@ -17,5 +17,10 @@ namespace HRManager
         {
             return ("Employees, as such, doesn't HAVE a pay summary!");
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + " for " + FirstName + " " + LastName;
+        }
     }
 }

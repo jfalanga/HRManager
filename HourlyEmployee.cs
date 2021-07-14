@@ -37,5 +37,10 @@ namespace HRManager
         {
             return FirstName + ' ' + LastName + "'s hourly pay is " + HourlyRate;
         }
+
+        public override string ToString()
+        {
+            return FirstName + ' ' + LastName;
+        }
     }
 }
